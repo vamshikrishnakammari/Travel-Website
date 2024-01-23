@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Discovery | Responsive Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const navButtons = document.querySelectorAll(".nav-btn");
+          const contentSections = document.querySelectorAll(".content");
+          const videoSlides = document.querySelectorAll(".video-slide");
+      
+          // Add click event listener to each navigation button
+          navButtons.forEach(function(button, index) {
+            button.addEventListener("click", function() {
+              // Remove 'active' class from all buttons, content sections, and video slides
+              navButtons.forEach(function(btn) {
+                btn.classList.remove("active");
+              });
+              contentSections.forEach(function(section) {
+                section.classList.remove("active");
+              });
+              videoSlides.forEach(function(slide) {
+                slide.classList.remove("active");
+                slide.pause(); // Pause the video
+              });
+      
+              // Add 'active' class to the clicked button, corresponding content section, and video slide
+              this.classList.add("active");
+              contentSections[index].classList.add("active");
+              videoSlides[index].classList.add("active");
+              videoSlides[index].play(); // Play the video
+            });
+          });
+        });
+    </script>
+
+    <section class="home">
+       <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+     
+
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        
+      </div>
+    </section>
+
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="#" data-aos="zoom-in-left" data-aos-delay="150" class="logo"><span>D</span>estination<span> D</span>iscovery</a>
+        <nav class="navbar">
+            <a href="#home" data-aos="zoom-in-left" data-aos-delay="300">home</a>
+            <a href="#about" data-aos="zoom-in-left" data-aos-delay="450">about</a>
+            <a href="#services" data-aos="zoom-in-left" data-aos-delay="600">services</a>
+            <a href="#destination" data-aos="zoom-in-left" data-aos-delay="750">destination</a>
+            <a href="#gallery" data-aos="zoom-in-left" data-aos-delay="900">gallery</a>
+            <a href="#blog" data-aos="zoom-in-left" data-aos-delay="1050">blog</a>
+        </nav>
+        <a href="#book-form" class="btn" data-aos="zoom-in-left" data-aos-delay="1200">book now</a>
+    </header>
+
+       
+
+    
+
+    <!-- booking section start--->
+
+
+        <section class="book-form" id="book-form">
+            <form action="">
+                <div class="inputBox" data-aos="zoom-in" data-aos-delay="150">
+                    <span>you are planning ?</span>
+                    <input type="text" placeholder="destination">
+                </div>
+
+                <div class="inputBox" data-aos="zoom-in" data-aos-delay="300">
+                    <span>when looking for ?</span>
+                    <input type="date" value="">
+                </div>
+
+                <div class="inputBox" data-aos="zoom-in" data-aos-delay="450">
+                    <span>Total members ?</span>
+                    <input type="number" placeholder="no of travellers" value="">
+                </div>
+
+            <input type="submit" value="find now" data-aos="zoom-in" data-aos-delay="600" class="btn">
+            </form>
+        </section>
+
+
+    <!-- booking section end--->
+
+
+
+    <!-- ------about start---------->
+
+        <section class="about" id="about">
+            <div class="video-container" data-aos="fade-right" data-aos-delay="300">
+                <video src="about.mp4" muted autoplay loop class="video"></video>
+
+            </div>
+
+            <div class="content" data-aos="fade-left" data-aos-delay="600">
+                <span>who we are ?</span>
+                <h3>A smiling agent for you</h3>
+                <p>something relevent write here=-----------------------</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+        </section>
+
+
+     <!-- ------about  end ---------->
+
+<!------------services------------->
+            
+            <section class="services" id="services">
+                <div class="heading">
+                    <span>our services</span>
+                    <h1>cost effective</h1>
+                </div>
+
+                <div class="box-container">
+                    <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                        <i class="fas fa-globe"></i>
+                        <h3>Worldwide</h3>
+                       
+                    </div>
+                    <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                        <i class="fas fa-hiking"></i>
+                        <h3>adventure</h3>
+                        
+                    </div>
+                    <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+                        <i class="fas fa-utensils"></i>
+                        <h3>food & drinks</h3>
+                        
+                    </div>
+
+                    <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
+                        <i class="fas fa-hotel"></i>
+                        <h3>affordable hotels</h3>
+                        
+                    </div>
+
+                    <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
+                        <i class="fas fa-wallet"></i>
+                        <h3>affordable price</h3>
+                        
+                    </div>
+
+                    <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 support</h3>
+                       
+                    </div>
+                </div>
+            </section>
+
+
+<!------------services end------------->
+
+
+<!----destination start----->
+
+        <section class="destination" id="destination">
+            <div class="heading">
+                <span>our destination</span>
+                <h1>keep looking up</h1>
+            </div>
+            <div class="box-container">
+                <div class="box" data-aos="fade-up" data-aos-delay="150">
+                    <div class="image">
+                        <img src="images/des-1.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Himalayas</p>
+                            <a href=""> read more <i class="fas fa-angle"></i></a>
+                        </div>
+                    </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="image">
+                        <img src="images/des-2.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Goa</p>
+                            <a href=""> read more <i class="fas fa-angle"></i></a>
+                        </div>
+                    </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="450">
+                    <div class="image">
+                        <img src="images/des-3.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Maldives</p>
+                            <a href=""> read more <i class="fas fa-angle"></i></a>
+                        </div>
+                    </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="600">
+                    <div class="image">
+                        <img src="images/des-4.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Agra</p>
+                            <a href=""> read more <i class="fas fa-angle"></i></a>
+                        </div>
+                    </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="750">
+                    <div class="image">
+                        <img src="images/des-5.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Jammu & Kashmir</p>
+                            <a href=""> read more <i class="fas fa-angle"></i></a>
+                        </div>
+                    </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="800">
+                    <div class="image">
+                        <img src="images/des-6.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Rome</p>
+                            <a href=""> read more <i class="fas fa-angle"></i></a>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up" data-aos-delay="950">
+                    <div class="image">
+                        <img src="images/des-7.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Egypt</p>
+                            <a href=""> read more <i class="fas fa-angle"></i></a>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up" data-aos-delay="1050">
+                    <div class="image">
+                        <img src="images/des-8.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Kerala</p>
+                            <a href=""> read more <i class="fas fa-angle"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            </div>
+        </section>
+
+
+<!----destination end----->
+
+<!--- gallery start ------>
+
+
+        <section class="gallery" id="gallery">
+            <div class="heading">
+                <span>our gallery</span>
+                <h1>memories last forever</h1>
+            </div>
+
+
+            <div class="box-container">
+                <div class="box" data-aos="zoom-in-up" data-aos-delay="100">
+                    <img src="images/gallery-img-1.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>Green land</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="200">
+                    <img src="images/gallery-img-2.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>Santorini, Greece</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                    <img src="images/gallery-img-3.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>Maldives</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="400">
+                    <img src="images/gallery-img-4.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>New Delhi,India</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="500">
+                    <img src="images/gallery-img-5.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>Australia</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
+                    <img src="images/gallery-img-6.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>Safari in Serengeti National Park, Tanzania</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="700">
+                    <img src="images/gallery-img-7.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>Grand Conyon.USA</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="800">
+                    <img src="images/gallery-img-8.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>Great Wall of Chine, China</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+                    <img src="images/gallery-img-9.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>Machu Picchu,Peru</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="1000">
+                    <img src="images/gallery-img-10.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>The Pyramids of Giza, Egypt</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="1100">
+                    <img src="images/gallery-img-11.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>The Colosseum, Italy</h3>           
+                </div>
+                  <div class="box" data-aos="zoom-in-up" data-aos-delay="1200">
+                    <img src="images/gallery-img-12.jpg" alt="">
+                    <span>travel spot</span>
+                    <h3>The Eiffel Tower, France</h3>           
+                </div>          
+                </div>
+
+            </div>
+        </section>
+
+<!--- gallery end ------>
+
+
+<!--- review section starts--->
+
+        
+        <section class="review">
+            <div class="box-container" data-aos="fade-up" data-aos-delay="300">
+                <div class="box">
+                    <p>the trip felt like a new world</p>
+                    <div class="user">
+                        <img src="images/pic-1.jpg" alt="">
+                        <div class="info">
+                            <h3>John</h3>
+                            <span>Designer</span>
+                        </div>
+                    </div>
+                </div>   
+                   <div class="box">
+                    <p>found myself!</p>
+                    <div class="user">
+                        <img src="images/pic-2.jpg" alt="">
+                        <div class="info">
+                            <h3>Penny</h3>
+                            <span>Traveller</span>
+                        </div>
+                    </div>
+                </div> 
+                   <div class="box">
+                    <p>It's been great travel trip in the years!</p>
+                    <div class="user">
+                        <img src="images/pic-3.jpg" alt="">
+                        <div class="info">
+                            <h3>Sheldon</h3>
+                            <span>Youtuber</span>
+                        </div>
+                    </div>
+                </div> 
+                   <div class="box">
+                    <p>It's a great experience!</p>
+                    <div class="user">
+                        <img src="images/pic-4.jpg" alt="">
+                        <div class="info">
+                            <h3>Ross</h3>
+                            <span>Actor</span>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="content" data-aos="fade-left" data-aos-delay="600">
+            <span>testimonials</span>
+            <h3>good news from our clients</h3>
+            <p>Here are the experiences of our clients in their words </p>
+            </div>
+        </section>    
+    
+
+
+
+<!--- review section ends --->
+
+
+<!-----banner img section start--->
+
+
+
+
+
+            <div class="banner">
+             <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+                 <span>start your adventure</span>
+                 <h3>let's explore world with us</h3>
+                 
+                 <a href="#book-form" class="btn">book now</a>
+             </div>
+         </div>
+
+
+        
+<!-----banner img section end--->
+
+
+
+
+<!----blog section start-->
+
+
+
+
+        
+        <section class="blog" id="blog">
+            <div class="heading">
+                <span>blogs & posts</span>
+                <h1>Client experience in words</h1>
+            </div>
+            <div class="box-container">
+                <div class="box" data-aos="fade-up" data-aos-delay="150">
+                    <div class="image">
+                    <img src="images/blogs-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="link"> one mile at a time</a>
+                    <p>lorem ipsum doal sit amet consettie adiposcin wlit</p>
+                    <div class="icon">
+                        <a href=""><i class="fas fa-clock"></i>15 jan 2023</a>
+                        <a href=""><i class="fas fa-user"></i>by rahul</a>
+                    </div>
+                </div>
+            </div>
+            
+                    <div class="box" data-aos="fade-up" data-aos-delay="300">
+                   <div class="image">
+                    <img src="images/blogs-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="link"> one mile at a time</a>
+                    <p>lorem ipsum doal sit amet consettie adiposcin wlit</p>
+                    <div class="icon">
+                        <a href=""><i class="fas fa-clock"></i>24 nov 2023</a>
+                        <a href=""><i class="fas fa-user"></i>by ramu</a>
+                    </div>
+                </div>
+            </div>
+            
+                    <div class="box" data-aos="fade-up" data-aos-delay="450">
+                        <div class="image">
+                    <img src="images/blogs-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="link"> one mile at a time</a>
+                    <p>lorem ipsum doal sit amet consettie adiposcin wlit</p>
+                    <div class="icon">
+                        <a href=""><i class="fas fa-clock"></i>21 june 2023</a>
+                        <a href=""><i class="fas fa-user"></i>by krishna</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+
+<!----blog section end-->
+
+
+
+<!--- footer start--->
+
+        
+        <section class="footer">
+            <div class="box-container">
+                <div class="box" data-aos="fade-up" data-aos-delay="150">
+                    <a href="#" class="logo"><span>D</span>estination <span>D</span>iscovery</a>
+                        <p>lorem iosum vamhi nthan is very fhakj iheoihfi.</p>
+                        <div class="share">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up" data-aos-delay="300">
+                        <h3>quick links</h3>
+                        <a href="#home" class="links"><i class="fas fa-arrow-right"></i>home</a>
+                        <a href="#about" class="links"><i class="fas fa-arrow-right"></i>about</a>
+                        <a href="#services" class="links"><i class="fas fa-arrow-right"></i>services</a>
+                        <a href="#destination" class="links"><i class="fas fa-arrow-right"></i>destination</a>
+                        <a href="#gallery" class="links"><i class="fas fa-arrow-right"></i>gallery</a>
+                        <a href="#blog" class="links"><i class="fas fa-arrow-right"></i>blog</a>
+                    </div>
+                    <div class="box" data-aos="fade-up" data-aos-delay="450">
+                        <h3>contact info</h3>
+                        <p><i class="fas fa-map"></i>Hyderabad,Telangana,India</p>
+                        <p><i class="fas fa-phone"></i>+123 852 144-85</p>
+                        <p><i class="fas fa-envelope"></i>destinationdiscovery@gmail.com</p>
+                        <p><i class="fas fa-clock"></i>8:00am - 10:00pm</p>
+                    </div>
+                    <div class="box" data-aos="fade-up" data-aos-delay="600">
+                        <h3>newsletter</h3>
+                        <p>subscribe for the latest update</p>
+                        <form action="">
+                            <input type="email" name="" placeholder="enter your mail.." class="email" id="">
+                            <input type="submit" name="" value="subscribe" class="btn">
+                        </form>
+            </div>
+        </div>
+        </section>
+        
+        <div class="credit"> created by <span> group M7</span> | all rights are reserved.</div>
+<!--- footer end --->
+
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 150,
+        })
+
+        const slides= document.querySelectorAll(".video-slide");
+
+var sliderNav = function(manual){
+ btns.forEach((btn) => {
+     btn.classList.remove("active");
+ });
+
+ btns.forEach((slide) => {
+     slide.classList.remove("active");
+ });
+
+ btns[manual].classlist.add("active");
+ slides[manual].classlist.add("active");
+}
+
+btns.forEach((btn, i) =>{
+ btn.addEventListener("click", () => {
+     sliderNav(i);
+ })
+})
+        
+    </script>
+</body>
+</html>
